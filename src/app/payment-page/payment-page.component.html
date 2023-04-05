@@ -1,0 +1,38 @@
+<div class="container">
+<div class="card mt-5">
+  <form #PaymentForm="ngForm" (ngSubmit)="PaymentOrder(PaymentForm)">
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Full Name</mat-label>
+      <input
+        matInput
+        placeholder="Card Number"
+
+        name="cardNumber"
+    /></mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>CVV</mat-label>
+      <input
+        matInput
+        placeholder="CVV"
+
+        name="cvv"
+    /></mat-form-field>
+
+    <mat-form-field appearance="outline" class="w-100">
+      <mat-label>Contact Number</mat-label>
+      <input
+        matInput
+        placeholder="Expiry Date"
+
+        name="expiryDate"
+    /></mat-form-field>
+    <div align="right">
+      <button type="submit" mat-stroked-button color="primary">
+        Place Order
+      </button>
+    </div>
+  </form>
+</div>
+</div>
+

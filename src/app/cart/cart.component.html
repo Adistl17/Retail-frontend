@@ -1,0 +1,33 @@
+<div class="container">
+<h1>Items in Cart</h1>
+<div align="right" class="mb-3">
+  <button (click)="checkout()"color="primary" mat-raised-button>Checkout</button>
+</div>
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th scope="col">#</th>
+			<th scope="col">Name</th>
+			<th scope="col">Category</th>
+			<th scope="col" >Description</th>
+			<th scope="col" >Price</th>
+      <th scope="col" >  </th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let element of product; index as i">
+			<th scope="row">{{ i + 1 }}</th>
+			<td>
+
+				{{ element.pname }}
+			</td>
+			<td >{{ element.pcategory }}</td>
+			<td >{{ element.pdesc}}</td>
+      <td>{{ element.pprice}}</td>
+      <td><button mat-raised-button (click)="delete(element.pid)">Delete</button></td>
+
+		</tr>
+	</tbody>
+</table>
+</div>

@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Items in Cart</h1>
+
+
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+
+        <th scope="col">Name</th>
+        <th scope="col">Address</th>
+        <th scope="col">Contact No.</th>
+        <th scope="col" >Amount</th>
+        <th scope="col" >Status</th>
+        <th scope="col" >  </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let element of myOrder; index as i">
+        <th scope="row">{{ i + 1 }}</th>
+        <td>
+
+          {{ element.orderFullName }}
+        </td>
+        <td >{{ element.orderFullAddress }}</td>
+        <td >{{ element.orderContactNumber}}</td>
+        <td>{{ element.orderAmount}}</td>
+        <td>{{ element.orderStatus}}</td>
+
+
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
